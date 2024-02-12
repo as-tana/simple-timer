@@ -1,3 +1,4 @@
+/* ベースのスタイル調整 */
 body, html {
     margin: 0;
     padding: 0;
@@ -12,4 +13,22 @@ body, html {
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
+}
+
+/* メディアクエリを追加 */
+@media (max-width: 600px) {
+    body, html {
+        flex-direction: column;
+    }
+
+    #timerDisplay {
+        font-size: 20px;
+    }
+
+    #timeInput, #startButton {
+        font-size: 16px;
+        padding: 10px;
+        width: 90%;
+        margin: 10px auto;
+    }
 }
