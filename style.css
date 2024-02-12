@@ -27,7 +27,7 @@ input, button {
     margin: 10px 0;
     border-radius: 5px;
     border: 1px solid #ddd;
-    width: calc(100% - 22px);
+    width: 100%; /* 親コンテナの幅に合わせる */
     box-sizing: border-box; /* paddingとborderをwidthに含める */
     /* その他のスタイル */
 }
