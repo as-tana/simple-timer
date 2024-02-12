@@ -46,7 +46,14 @@ button:hover {
     color: #333;
 }
 
-/* レスポンシブデザイン */
+/* 中サイズのデバイス用 */
+@media (min-width: 601px) and (max-width: 1024px) {
+    #app {
+        max-width: 600px;
+    }
+}
+
+/* 小サイズのデバイス用 */
 @media (max-width: 600px) {
     body, html {
         flex-direction: column;
@@ -54,6 +61,18 @@ button:hover {
 
     #app {
         width: 95%;
-        margin: 20px;
+        margin: 20px auto;
+    }
+
+    input, button {
+        width: calc(100% - 20px); /* パディングとボーダーを考慮 */
+    }
+
+    body, html {
+        font-size: 14px;
+    }
+
+    #timerDisplay {
+        font-size: 1.5em;
     }
 }
