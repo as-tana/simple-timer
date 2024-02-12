@@ -15,12 +15,19 @@ document.getElementById('startButton').addEventListener('click', () => {
     timerDisplay.textContent = `${timeLeft} seconds remaining`;
 
     const interval = setInterval(() => {
-        timeLeft--;
-        timerDisplay.textContent = `${timeLeft} seconds remaining`;
-        if (timeLeft <= 0) {
-            clearInterval(interval);
-            alert('Time is up!');
-            timerDisplay.textContent = '';
+    timeLeft--;
+    timerDisplay.textContent = `${timeLeft} seconds remaining`;
+    if (timeLeft <= 0) {
+        clearInterval(interval);
+        // バイブレーションAPIのサポートをチェック
+        if ('vibrate' in navigator) {
+            navigator.vibrate(1000); // 1秒間振動
         }
-    }, 1000);
+        // 音声通知
+        var audio = new Audio('path/to/alarm.mp3');
+        audio.play();
+
+        timerDisplay.textContent = '';
+    }
+}, 1000);
 });
