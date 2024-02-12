@@ -11,6 +11,7 @@ body, html {
 }
 
 #app {
+    margin: 0 auto; /* 上下のマージンを0にし、左右のマージンをautoに設定して中央揃えにします。 */
     text-align: center;
     width: 90%;
     max-width: 400px;
@@ -19,6 +20,7 @@ body, html {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     border-radius: 10px;
 }
+
 
 input, button {
     padding: 10px;
