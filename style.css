@@ -67,10 +67,10 @@ button:hover {
     }
 
     #app {
-        width: 100%; /* コンテナの幅を画面いっぱいに広げる */
-        padding: 10px; /* スマートフォン表示時のパディングを調整 */
-        margin: 0 auto; /* 必要に応じて上下のマージンを調整し、水平中央揃えにする */
-        box-sizing: border-box; /* パディングとボーダーを幅に含める */
+        width: calc(100% - 40px); /* 画面の幅から余白分を引く */
+        margin: 0 auto; /* 上下のマージンを0、左右のマージンをautoに設定して中央寄せ */
+        padding: 10px 20px; /* 上下に10px、左右に20pxのパディングを追加 */
+        box-sizing: border-box; /* パディングを含めた幅で計算 */
     }
 
     input, button {
