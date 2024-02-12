@@ -1,6 +1,16 @@
 document.getElementById('startButton').addEventListener('click', () => {
-    const time = document.getElementById('timeInput').value;
-    let timeLeft = time;
+    const timeInput = document.getElementById('timeInput').value;
+    const errorMessage = document.getElementById('errorMessage');
+
+    // 入力値が半角数字かどうかをチェック
+    if (!timeInput || isNaN(timeInput) || timeInput <= 0) {
+        errorMessage.style.display = 'block'; // エラーメッセージを表示
+        return; // ここで処理を終了
+    } else {
+        errorMessage.style.display = 'none'; // エラーメッセージを非表示
+    }
+
+    let timeLeft = timeInput;
     const timerDisplay = document.getElementById('timerDisplay');
     timerDisplay.textContent = `${timeLeft} seconds remaining`;
 
