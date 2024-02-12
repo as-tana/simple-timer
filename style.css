@@ -1,4 +1,4 @@
-/* ベースのスタイル調整 */
+/* ベーススタイル */
 body, html {
     margin: 0;
     padding: 0;
@@ -6,29 +6,54 @@ body, html {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 #app {
     text-align: center;
+    width: 90%;
+    max-width: 400px;
     padding: 20px;
-    box-sizing: border-box;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 10px;
 }
 
-/* メディアクエリを追加 */
+input, button {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: calc(100% - 22px);
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#timerDisplay {
+    margin-top: 20px;
+    font-size: 2em;
+    color: #333;
+}
+
+/* レスポンシブデザイン */
 @media (max-width: 600px) {
     body, html {
         flex-direction: column;
     }
 
-    #timerDisplay {
-        font-size: 20px;
-    }
-
-    #timeInput, #startButton {
-        font-size: 16px;
-        padding: 10px;
-        width: 90%;
-        margin: 10px auto;
+    #app {
+        width: 95%;
+        margin: 20px;
     }
 }
