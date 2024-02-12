@@ -23,12 +23,10 @@ body, html {
 
 
 input, button {
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    width: calc(100% - 22px);
+    box-sizing: border-box; /* paddingとborderをwidthに含める */
+    /* その他のスタイル */
 }
+
 
 button {
     background-color: #007bff;
